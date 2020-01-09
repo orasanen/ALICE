@@ -25,7 +25,7 @@ CITING
 
 If you use ALICE or it's derivatives, please cite the following paper:
 
-Räsänen, O., Seshadri, S. & Casillas, M. (submitted): *ALICE: An open-source tool
+Räsänen, O., Seshadri, S. & Casillas, M. (in preparation): *ALICE: An open-source tool
 for automatic linguistic unit count estimation from child-centered daylong recordings*.
 
 
