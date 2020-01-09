@@ -19,7 +19,7 @@ but optimized for counting across several minutes of audio. Also note that ALICE
 designed for "typical" high-quality audio recordings, and may
 not operate on such data properly.
 
-![alt text](http://www.cs.tut.fi/sgn/specog/ALICE_schematic.png)
+![alt text](http://www.cs.tut.fi/sgn/specog/ALICE_schematic2.png)
 
 
 
