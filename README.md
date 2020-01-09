@@ -7,12 +7,12 @@ ALICE is a tool for estimating the number of adult-spoken linguistic units from 
 recordings, as captured by microphones worn by children. It is meant as an open-source alternative
 for LENA <tm> adult word count (AWC) estimator [1].
 
-ALICE uses SylNet [2] for feature extraction and voice_type_classifier [3] for broad-class speaker
+ALICE uses SylNet [2] for feature extraction and voice-type-classifier [3] for broad-class speaker
 diarization. The used model for linguistic unit counts has been optimized across three languages:
 Argentinian Spanish, Tseltal, and American and UK variants of English.
 
 Unit counts from ALICE are not (and are not meant to be) accurate at short time-scales,
-but optimized for counting across several minutes of audio. Also note that ALICE is NOT 
+but optimized for counting across several minutes of audio. Also note that ALICE is NOT
 designed for "typical" high-quality audio recordings, and may
 not operate on such data properly.
 
@@ -37,7 +37,7 @@ REQUIRED PACKAGES
 
 LICENSE
 -------------------
-Copyright (C) 2020 Okko Räsänen, Tampere University & Aalto University
+Copyright (C) 2020 Okko Räsänen, Tampere University
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -105,6 +105,8 @@ REFERENCES
     Signal processing for young child speech language development
     Proceedings of the 1st Workshop on Child Computer and Interaction (WOCCI-2008), Chania, Crete, Greece.
     (https://www.lena.org/)
+
 [2] Seshadri S. & Räsänen O. (2019). SylNet: An Adaptable End-to-End Syllable Count Estimator for Speech.
     IEEE Signal Processing Letters, vol 26, pp. 1359--1363  (https://github.com/shreyas253/SylNet)
+
 [3] Lavechin, M.: Voice-type-classifier (https://github.com/MarvinLvn/voice-type-classifier)
