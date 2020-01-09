@@ -9,7 +9,9 @@ for LENA <tm> adult word count (AWC) estimator [1].
 
 ALICE uses SylNet [2] for feature extraction and voice-type-classifier [3] for broad-class speaker
 diarization. The used model for linguistic unit counts has been optimized across three languages:
-Argentinian Spanish, Tseltal, and American and UK variants of English.
+Argentinian Spanish, Tseltal, and American and UK variants of English. SylNet uses a model that
+has been adapted for daylong child-centered audio, starting from the baseline model available
+in standard SylNet.
 
 ALICE outputs an estimate for the number of phonemes, syllables, and words in the input. Only
 speech detected as spoken by adult male or female talkers is considered towards the counts.
