@@ -11,6 +11,9 @@ ALICE uses SylNet [2] for feature extraction and voice-type-classifier [3] for b
 diarization. The used model for linguistic unit counts has been optimized across three languages:
 Argentinian Spanish, Tseltal, and American and UK variants of English.
 
+ALICE outputs an estimate for the number of phonemes, syllables, and words in the input. Only
+speech detected as spoken by adult male or female talkers is considered towards the counts.
+
 Unit counts from ALICE are not (and are not meant to be) accurate at short time-scales,
 but optimized for counting across several minutes of audio. Also note that ALICE is NOT
 designed for "typical" high-quality audio recordings, and may
