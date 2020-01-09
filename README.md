@@ -59,7 +59,7 @@ INSTALLATION
 - Make sure you have all the dependencies listed above in REQUIRED PACKAGES and use
   e.g. pip to install the missing ones.
 
-- install voice_type_classifier (https://github.com/MarvinLvn/voice-type-classifier/edit/master/docs/installation.md):
+- install voice_type_classifier (taken from https://github.com/MarvinLvn/voice-type-classifier/edit/master/docs/installation.md):
 ```bash
     $ cd voice_type_classifier (inside ALICE folder)
 
