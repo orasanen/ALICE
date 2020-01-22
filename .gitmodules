@@ -1,6 +1,10 @@
-[submodule "voice_type_classifier"]
-	path = voice_type_classifier
-	url = https://github.com/MarvinLvn/voice-type-classifier
+#[submodule "voice_type_classifier"]
+#	path = voice_type_classifier
+#	url = https://github.com/MarvinLvn/voice-type-classifier
+[submodule "pyannote/pyannote-audio"]
+	path = pyannote/pyannote-audio
+	url = https://github.com/jsalt-coml/pyannote-audio
+	branch = bredin-pr
 [submodule "SylNet"]
 	path = SylNet
 	url = https://github.com/shreyas253/SylNet
