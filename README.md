@@ -64,11 +64,11 @@ INSTALLATION
 - Make sure you have all the dependencies listed above in REQUIRED PACKAGES and use
   e.g. pip to install the missing ones.
 
-- install voice_type_classifier (taken from https://github.com/MarvinLvn/voice-type-classifier/edit/master/docs/installation.md):
+- install voice_type_classifier (adapted from https://github.com/MarvinLvn/voice-type-classifier/edit/master/docs/installation.md):
 ```bash
     $ cd voice_type_classifier (inside ALICE folder)
 
-    # Step 2: This creates a conda environment with python 3.6
+    # Step 2: This creates a conda environment with python 3.6 (make sure you have cmake installed before you run this, if not, run pip install cmake first)
     $ conda env create -f pyannote/pyannote-audio/environment.yml
     $ conda activate pyannote # or source activate pyannote, depending on your config
     $ pip install pyannote/pyannote-audio
@@ -81,6 +81,8 @@ INSTALLATION
     $ conda deactivate #(or source deactivate)
     # All done!
 ```
+
+
 
 USAGE
 -------------------
