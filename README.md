@@ -59,7 +59,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 INSTALLATION
 -------------------
-- clone the repository (git clone https://github.com/orasanen/ALICE/)
+- clone the repository with submodules (git clone --recurse-submodules https://github.com/orasanen/ALICE/)
 
 - Make sure you have all the dependencies listed above in REQUIRED PACKAGES and use
   e.g. pip to install the missing ones.
