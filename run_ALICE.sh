@@ -41,7 +41,7 @@ mkdir -p $THISDIR/tmp_data/short/
 mkdir -p $THISDIR/tmp_data/features/
 
 # Run SAD on the files
-python prepare_data.py $THISDIR $DATADIR
+python3 prepare_data.py $THISDIR $DATADIR
 
 # Call voice_type_classifier to do broad-class diarization
 source activate pyannote
@@ -50,30 +50,39 @@ sh $THISDIR/voice_type_classifier/apply.sh $THISDIR/tmp_data/ "MAL FEM" $GPU
 source deactivate
 
 # Read .rttm files and split into utterance-sized wavs
-python split_to_utterances.py $THISDIR
-rm $THISDIR/tmp_data/*.wav
+python3 split_to_utterances.py $THISDIR
+#rm $THISDIR/tmp_data/*.wav
 
 
 # Extract SylNet syllable counts
-python $THISDIR/SylNet/run_SylNet.py $THISDIR/tmp_data/short/ $THISDIR/tmp_data/features/SylNet_out.txt $THISDIR/SylNet_model/model_1
+if python3 $THISDIR/SylNet/run_SylNet.py $THISDIR/tmp_data/short/ $THISDIR/tmp_data/features/SylNet_out.txt $THISDIR/SylNet_model/model_1 > $THISDIR/sylnet.log; then
 
 # Extract signal level features
-python extract_basic_features.py $THISDIR
+  python3 extract_basic_features.py $THISDIR
 
 # Combine features
-paste -d'\t' $THISDIR/tmp_data/features/SylNet_out.txt $THISDIR/tmp_data/features/other_feats.txt > $THISDIR/tmp_data/features/final_feats.txt
+  paste -d'\t' $THISDIR/tmp_data/features/SylNet_out.txt $THISDIR/tmp_data/features/other_feats.txt > $THISDIR/tmp_data/features/final_feats.txt
 
 # Linear regression from features to unit counts
-python regress_ALUCs.py $THISDIR
+  python3 regress_ALUCs.py $THISDIR
 
 # Merge with filename information
-paste -d'\t' $THISDIR/tmp_data/features/SylNet_out_files.txt $THISDIR/tmp_data/features/ALUCs_out_individual_tmp.txt > $THISDIR/tmp_data/features/ALUCs_out_individual.txt
-rm $THISDIR/tmp_data/features/ALUCs_out_individual_tmp.txt
+  paste -d'\t' $THISDIR/tmp_data/features/SylNet_out_files.txt $THISDIR/tmp_data/features/ALUCs_out_individual_tmp.txt > $THISDIR/tmp_data/features/ALUCs_out_individual.txt
+  rm $THISDIR/tmp_data/features/ALUCs_out_individual_tmp.txt
+else
+  # If SylNet fails, this is due to none of the inputs having adult male or female speech detected by the diarizer.
+  # Alternatively, dependencies of SylNet are not satisified.
+  # Get final estimates at clip-level (sum results from short .wavs)
+  touch $THISDIR/tmp_data/features/ALUCs_out_individual.txt
 
-# Get final estimates at clip-level (sum results from short .wavs)
-python getFinalEstimates.py $THISDIR $DATADIR
+
+fi
+
+python3 getFinalEstimates.py $THISDIR $THISDIR/tmp_data/
 
 # Cleanup
 rm -rf $THISDIR/tmp_data/
 cp $THISDIR/output_voice_type_classifier/tmp_data/all.rttm $THISDIR/diarization_output.rttm
 rm -rf $THISDIR/output_voice_type_classifier/
+
+echo "ALICE completed. Results written to $THISDIR/ALICE_output.txt and $THISDIR/diarization_output.rttm."
