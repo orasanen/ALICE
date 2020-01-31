@@ -62,8 +62,9 @@ INSTALLATION
 
 
 ```bash
-    # Step 1: Set up a conda environment (make sure you have cmake installed before you run this, 
-    if not, run pip install cmake first). First, navigate to ALICE folder
+    # Step 1: Set up a conda environment 
+    
+    # Navigate to ALICE folder:
     
     $ cd ALICE
     
@@ -107,10 +108,17 @@ To process your .wav files containing the audio of interest, run:
 ```
   $ sh run_ALICE.sh <data_location> --gpu
 ```
+Note that the use of GPU will speed up diarization substantially, but this will require CUDA toolkit
+and a compatible GPU.
 
-The use of GPU will speed up diarization substantially.
+After the processing is complete, results will be written to `ALICE_output.txt` inside ALICE main 
+directory. Diarization outputs will be written to `diarization_output.rttm` inside the same directory.
 
-Results will be written to `ALICE_output.txt` inside ALICE main folder.
+When done, deactivate the environment with
+```
+  $ conda deactivate
+```
+
 
 Notes:
 
