@@ -64,28 +64,41 @@ INSTALLATION
 - Make sure you have all the dependencies listed above in REQUIRED PACKAGES and use
   e.g. pip to install the missing ones.
 
-- install voice_type_classifier (adapted from https://github.com/MarvinLvn/voice-type-classifier/edit/master/docs/installation.md):
+
 ```bash
-    $ cd voice_type_classifier (inside ALICE folder)
+    # Step 1: Set up a conda environment (make sure you have cmake installed before you run this, if not, run pip install cmake first). First, navigate to ALICE folder
+    
+    $ cd ALICE
+    
+    # and run:
+    
+    $ conda env create -f ALICE.yml
+    
+    # Step 2: activate the environment
+    
+    $ conda activate ALICE
+    
+    # Step 3: install pyannote-audio by running
 
-    # Step 2: This creates a conda environment with python 3.6 (make sure you have cmake installed before you run this, if not, run pip install cmake first)
-    $ conda env create -f pyannote/pyannote-audio/environment.yml
-    $ conda activate pyannote # or source activate pyannote, depending on your config
-    $ pip install pyannote/pyannote-audio
+    $ pip install voice_type_classifier/pyannote/pyannote-audio
+    
+    # Done! If you now want to use ALICE, see below. If not, deactivate the environment with
+    
+    $ conda deactivate
 
-    # Step 3: Install sox
-    # On Ubuntu
-    $ sudo apt-get install sox
-    # On MacOS (if brew installed)
-    $ brew install sox
-    $ conda deactivate #(or source deactivate)
-    # All done!
+
 ```
 
 
 
 USAGE
 -------------------
+Always activate the ALICE conda environment before usage. To do this, run:
+```
+  $ conda activate ALICE
+```
+
+
 To process your .wav files containing the audio of interest, run:
 ```
   $ sh run_ALICE.sh <data_location>
