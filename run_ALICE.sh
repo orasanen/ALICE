@@ -44,10 +44,10 @@ mkdir -p $THISDIR/tmp_data/features/
 python3 prepare_data.py $THISDIR $DATADIR
 
 # Call voice_type_classifier to do broad-class diarization
-source activate pyannote
+conda activate pyannote
 rm -rf $THISDIR/output_voice_type_classifier/
 sh $THISDIR/voice_type_classifier/apply.sh $THISDIR/tmp_data/ "MAL FEM" $GPU
-source deactivate
+conda deactivate
 
 # Read .rttm files and split into utterance-sized wavs
 python3 split_to_utterances.py $THISDIR
