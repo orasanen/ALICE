@@ -57,7 +57,7 @@ python3 split_to_utterances.py $THISDIR
 files=($THISDIR/tmp_data/short/*.wav)
 if [ ${#files[@]} -gt 0 ]; then
 
-    if python3 $THISDIR/SylNet/run_SylNet.py $THISDIR/tmp_data/short/ $THISDIR/tmp_data/features/SylNet_out.txt $THISDIR/SylNet_model/model_1 > $THISDIR/sylnet.log; then
+    if python3 $THISDIR/SylNet/run_SylNet.py $THISDIR/tmp_data/short/ $THISDIR/tmp_data/features/SylNet_out.txt $THISDIR/SylNet_model/model_1 &> $THISDIR/sylnet.log; then
         echo "SylNet completed"
     else
         echo "SylNet failed. See sylnet.log for more information"
