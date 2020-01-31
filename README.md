@@ -62,7 +62,8 @@ INSTALLATION
 
 
 ```bash
-    # Step 1: Set up a conda environment (make sure you have cmake installed before you run this, if not, run pip install cmake first). First, navigate to ALICE folder
+    # Step 1: Set up a conda environment (make sure you have cmake installed before you run this, 
+    if not, run pip install cmake first). First, navigate to ALICE folder
     
     $ cd ALICE
     
