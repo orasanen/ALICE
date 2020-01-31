@@ -120,6 +120,12 @@ Notes:
 - ALICE will require empty hard disk space equal to approx. the size of the .wavs
   to be processed.
 
+DEBUGGING
+-------------------
+
+If you are encountering problems with SylNet, please refer to sylnet.log that is automatically
+generated to ALICE main folder upon ALICE execution. SylNet error printing to command line is disabled 
+due to a large number of warnings due to the use of Tensorflow 1.
 
 REFERENCES
 -------------------
