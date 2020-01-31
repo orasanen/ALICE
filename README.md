@@ -36,8 +36,8 @@ for automatic linguistic unit count estimation from child-centered daylong recor
 
 REQUIRED PACKAGES
 -------------------
-- Conda
-- CUDA toolkit drivers (for GPU support)
+- Conda (https://docs.conda.io/en/latest/)
+- CUDA toolkit (for GPU support; https://developer.nvidia.com/cuda-toolkit)
 
 (other packages automatically installed by conda environment)
 
