@@ -54,9 +54,11 @@ python3 split_to_utterances.py $THISDIR
 
 
 # Extract SylNet syllable counts
-files=($THISDIR/tmp_data/short/*.wav)
-if [ ${#files[@]} -gt 0 ]; then
-
+if [ -z "$(ls -A $THISDIR/tmp_data/short/)" ]; then
+#if [ ${#files[@]} -gt 0 ]; then
+  touch $THISDIR/tmp_data/features/ALUCs_out_individual.txt
+  else
+  
     if python3 $THISDIR/SylNet/run_SylNet.py $THISDIR/tmp_data/short/ $THISDIR/tmp_data/features/SylNet_out.txt $THISDIR/SylNet_model/model_1 &> $THISDIR/sylnet.log; then
         echo "SylNet completed"
     else
@@ -76,14 +78,15 @@ if [ ${#files[@]} -gt 0 ]; then
 # Merge with filename information
   paste -d'\t' $THISDIR/tmp_data/features/SylNet_out_files.txt $THISDIR/tmp_data/features/ALUCs_out_individual_tmp.txt > $THISDIR/tmp_data/features/ALUCs_out_individual.txt
   rm $THISDIR/tmp_data/features/ALUCs_out_individual_tmp.txt
-else
+fi
+#else
   # If SylNet fails, this is due to none of the inputs having adult male or female speech detected by the diarizer.
   # Alternatively, dependencies of SylNet are not satisified.
   # Get final estimates at clip-level (sum results from short .wavs
-  touch $THISDIR/tmp_data/features/ALUCs_out_individual.txt
+#
 
 
-fi
+#fi
 
 python3 getFinalEstimates.py $THISDIR $THISDIR/tmp_data/
 
