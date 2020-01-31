@@ -57,9 +57,7 @@ INSTALLATION
 -------------------
 - clone the repository with submodules (git clone --recurse-submodules https://github.com/orasanen/ALICE/)
 
-- Make sure you have all the dependencies listed above in REQUIRED PACKAGES and use
-  e.g. pip to install the missing ones.
-
+- Use command line / shell to execute the following steps:
 
 ```bash
     # Step 1: Set up a conda environment 
