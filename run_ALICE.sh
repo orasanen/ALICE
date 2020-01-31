@@ -54,7 +54,13 @@ python3 split_to_utterances.py $THISDIR
 
 
 # Extract SylNet syllable counts
-if python3 $THISDIR/SylNet/run_SylNet.py $THISDIR/tmp_data/short/ $THISDIR/tmp_data/features/SylNet_out.txt $THISDIR/SylNet_model/model_1 > $THISDIR/sylnet.log; then
+files=($THISDIR/tmp_data/short/*.wav)
+if [ ${#files[@]} -gt 0 ]; then
+  if python3 $THISDIR/SylNet/run_SylNet.py $THISDIR/tmp_data/short/ $THISDIR/tmp_data/features/SylNet_out.txt $THISDIR/SylNet_model/model_1 > $THISDIR/sylnet.log; then
+    else
+        echo "SylNet failed. See sylnet.log for more information"
+        return
+    fi
 
 # Extract signal level features
   python3 extract_basic_features.py $THISDIR
@@ -71,7 +77,7 @@ if python3 $THISDIR/SylNet/run_SylNet.py $THISDIR/tmp_data/short/ $THISDIR/tmp_d
 else
   # If SylNet fails, this is due to none of the inputs having adult male or female speech detected by the diarizer.
   # Alternatively, dependencies of SylNet are not satisified.
-  # Get final estimates at clip-level (sum results from short .wavs)
+  # Get final estimates at clip-level (sum results from short .wavs
   touch $THISDIR/tmp_data/features/ALUCs_out_individual.txt
 
 
