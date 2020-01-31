@@ -36,14 +36,10 @@ for automatic linguistic unit count estimation from child-centered daylong recor
 
 REQUIRED PACKAGES
 -------------------
-- Python 3 (tested on 3.6.5)
 - Conda
-- LibROSA (tested with 0.6.3, and 0.7, https://librosa.github.io/librosa/)
-- TensorFlow (tested on version 1.10.1)
-- SciPy
-- Numpy
+- CUDA toolkit drivers (for GPU support)
 
-(see also additional diarization installation instructions below)
+(other packages automatically installed by conda environment)
 
 
 LICENSE
