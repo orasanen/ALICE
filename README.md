@@ -7,7 +7,7 @@ ALICE is a tool for estimating the number of adult-spoken linguistic units from 
 recordings, as captured by microphones worn by children. It is meant as an open-source alternative
 for LENA <tm> adult word count (AWC) estimator [1].
 
-ALICE uses SylNet [2] for feature extraction and voice-type-classifier [[3]](https://github.com/MarvinLvn/voice-type-classifier) for broad-class speaker
+ALICE uses SylNet [[2]](https://github.com/shreyas253/SylNet) for feature extraction and voice-type-classifier [[3]](https://github.com/MarvinLvn/voice-type-classifier) for broad-class speaker
 diarization. The used model for linguistic unit counts has been optimized across three languages:
 Argentinian Spanish, Tseltal, and American and UK variants of English. SylNet uses a model that
 has been adapted for daylong child-centered audio, starting from the baseline model available
