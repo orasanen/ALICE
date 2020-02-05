@@ -109,5 +109,5 @@ dependencies:
     - tensorflow==1.10.1
     - wcwidth==0.1.8
     - xarray==0.11.0
-prefix: /home/rasaneno/.conda/envs/pyannote
+
 
