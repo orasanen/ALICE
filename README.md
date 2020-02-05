@@ -70,12 +70,11 @@ INSTALLATION
     
     # and run:
     
-    $ conda env create -f ALICE.yml          (If you have CUDA GPU support)
-    $ conda env create -f ALICE_CPU.yml      (If you don't have CUDA GPU support)
+    $ conda env create -f ALICE.yml          
     
     # Step 2: activate the environment
     
-    $ conda activate ALICE  # (or conda activate ALICE_CPU)
+    $ conda activate ALICE  
     
     # Step 3: install pyannote-audio by running
 
