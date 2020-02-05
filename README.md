@@ -37,7 +37,7 @@ for automatic linguistic unit count estimation from child-centered daylong recor
 REQUIRED PACKAGES
 -------------------
 - Conda (https://docs.conda.io/en/latest/)
-- CUDA toolkit (for GPU support; https://developer.nvidia.com/cuda-toolkit)
+- CMake (```pip install cmake``` or ```conda install cmake```)
 
 (other packages automatically installed by conda environment)
 
@@ -55,11 +55,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 INSTALLATION
 -------------------
-- clone the repository with submodules (git clone --recurse-submodules https://github.com/orasanen/ALICE/)
+- Clone the repository with submodules (git clone --recurse-submodules https://github.com/orasanen/ALICE/)
+
+- Make sure you have Conda and Cmake installed.
 
 - Use command line / shell to execute the following steps:
 
-```bash
+```bash    
     # Step 1: Set up a conda environment 
     
     # Navigate to ALICE folder:
@@ -68,11 +70,12 @@ INSTALLATION
     
     # and run:
     
-    $ conda env create -f ALICE.yml
+    $ conda env create -f ALICE.yml          (If you have CUDA GPU support)
+    $ conda env create -f ALICE_CPU.yml      (If you don't have CUDA GPU support)
     
     # Step 2: activate the environment
     
-    $ conda activate ALICE
+    $ conda activate ALICE  # (or conda activate ALICE_CPU)
     
     # Step 3: install pyannote-audio by running
 
@@ -102,7 +105,7 @@ To process your .wav files containing the audio of interest, run:
   where <data_location> = folder of .wavs, path to a .wav, or path to a .txt file
   with a list of .wav paths, one per row.
 
-  For GPU support during diarization , use
+  For GPU use during diarization , use
 ```
   $ sh run_ALICE.sh <data_location> --gpu
 ```
