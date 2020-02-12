@@ -55,7 +55,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 INSTALLATION
 -------------------
-- Clone the repository with submodules (git clone --recurse-submodules https://github.com/orasanen/ALICE/)
+- Clone the repository with submodules (`git clone --recurse-submodules https://github.com/orasanen/ALICE/`)
 
 - Make sure you have Conda and Cmake installed.
 
