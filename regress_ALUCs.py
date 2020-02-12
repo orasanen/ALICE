@@ -9,15 +9,20 @@ curdir = sys.argv[1]
 
 F = genfromtxt(curdir + "/tmp_data/features/final_feats.txt", delimiter='\t')
 
-X_words = [0.1212, 2.6642, -0.0406, -0.0001, 5.9070]
-X_syls = [0.2870, 4.0694, -0.0644, -0.0004, 9.3347]
-X_phones = [0.4618, 10.9067, -0.2042, -0.0002, 31.5639]
+
+
+X_phones = [1.1092 16.1548 -0.3175 -0.0014 48.7033]
+X_syls = [0.6267 8.8197 -0.1579 -0.0010 23.0796]
+X_words = [0.3029 5.9524 -0.0977 -0.0004 14.2853]
 
 F = np.column_stack((F,np.ones((F.shape[0],1))))
 
 words_est = np.dot(F,X_words)
+words_est = words_est.clip(min = 0)
 syls_est = np.dot(F,X_syls)
+syls_est = syls_est.clip(min = 0)
 phones_est = np.dot(F,X_phones)
+phones_est = phones_est.clip(min = 0)
 
 Y = np.column_stack((phones_est,syls_est))
 Y = np.column_stack((Y,words_est))
