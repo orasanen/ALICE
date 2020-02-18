@@ -46,7 +46,7 @@ python3 prepare_data.py $THISDIR $DATADIR
 # Call voice_type_classifier to do broad-class diarization
 
 rm -rf $THISDIR/output_voice_type_classifier/
-sh $THISDIR/voice_type_classifier/apply.sh $THISDIR/tmp_data/ "MAL FEM" $GPU
+bash $THISDIR/voice_type_classifier/apply.sh $THISDIR/tmp_data/ "MAL FEM" $GPU
 
 # Read .rttm files and split into utterance-sized wavs
 python3 split_to_utterances.py $THISDIR
@@ -58,7 +58,7 @@ if [ -z "$(ls -A $THISDIR/tmp_data/short/)" ]; then
 #if [ ${#files[@]} -gt 0 ]; then
   touch $THISDIR/tmp_data/features/ALUCs_out_individual.txt
   else
-  
+
     if python3 $THISDIR/SylNet/run_SylNet.py $THISDIR/tmp_data/short/ $THISDIR/tmp_data/features/SylNet_out.txt $THISDIR/SylNet_model/model_1 &> $THISDIR/sylnet.log; then
         echo "SylNet completed"
     else
