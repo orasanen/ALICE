@@ -34,8 +34,13 @@ Räsänen, O., Seshadri, S. & Casillas, M. (in preparation): *ALICE: An open-sou
 for automatic linguistic unit count estimation from child-centered daylong recordings*.
 
 
-REQUIRED PACKAGES
+REQUIREMENTS
 -------------------
+
+ALICE has been developed and so-far tested for a range of Linux and macOS environments. Windows users may encounter problems with some package versions, and we are currently looking into this. 
+
+Packages:
+
 - Conda (https://docs.conda.io/en/latest/)
 - CMake (```pip install cmake``` or ```conda install cmake```)
 
