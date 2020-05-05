@@ -133,12 +133,50 @@ Notes:
 - ALICE will require empty hard disk space equal to approx. the size of the .wavs
   to be processed.
 
+
+DEMO & INSTALLATION VERIFICATION 
+-------------------
+
+Navigate to ALICE folder, and run
+```
+  $ conda activate ALICE
+  $ sh run_ALICE.sh demo/ROS_5271_20_01_03600_snippet_mono.wav 
+```
+
+After a while, ALICE should complete without errors and print
+``
+SylNet completed
+ALICE completed. Results written to <yourpath>/ALICE/ALICE_output.txt and <yourpath>/ALICE/diarization_output.rttm.
+``
+
+Now, contents of the <yourpath>/ALICE/ALICE_output.txt should look like this:
+
+``
+FileID   phonemes        syllables       words
+ROS_5271_20_01_03600_snippet_mono       31      11      9
+``
+
+If this is the case, your installation of ALICE works correctly!
+
 DEBUGGING
 -------------------
 
 If you are encountering problems with SylNet, please refer to sylnet.log that is automatically
 generated to ALICE main folder upon ALICE execution. SylNet error printing to command line is disabled 
 due to a large number of warnings due to the use of Tensorflow 1.
+
+## Some common problems:
+
+### Error #1
+Traceback (most recent call last):
+  File "/Users/rasaneno/Documents/koodit/dists/ALICE/SylNet/run_SylNet.py", line 99, in <module>
+    y = y/max(abs(y))
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+    
+### Solution #1 
+
+The input speech waveform is likely not mono channel. Convert to mono before processing.   
+
 
 REFERENCES
 -------------------
