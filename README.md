@@ -172,13 +172,13 @@ due to a large number of warnings due to the use of Tensorflow 1.
 
 ### Error #1
 Traceback (most recent call last):
-  File "/Users/rasaneno/Documents/koodit/dists/ALICE/SylNet/run_SylNet.py", line 99, in <module>
+  File "<yourpath>/ALICE/SylNet/run_SylNet.py", line 99, in <module>
     y = y/max(abs(y))
 ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
     
 ### Solution #1 
 
-The input speech waveform is likely not mono channel. Convert to mono before processing.   
+The input speech signal is likely to be stereo. Convert to mono before processing.   
 
 
 REFERENCES
