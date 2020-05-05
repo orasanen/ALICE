@@ -149,7 +149,7 @@ SylNet completed
 ALICE completed. Results written to <yourpath>/ALICE/ALICE_output.txt and <yourpath>/ALICE/diarization_output.rttm.
 ``
 
-Now, contents of the <yourpath>/ALICE/ALICE_output.txt should look like this:
+Now, contents of the ``<yourpath>/ALICE/ALICE_output.txt`` should look like this:
 
 ------
 
