@@ -41,7 +41,7 @@ mkdir -p $THISDIR/tmp_data/short/
 mkdir -p $THISDIR/tmp_data/features/
 
 # Run SAD on the files
-python3 prepare_data.py $THISDIR $DATADIR
+python3 prepare_data.py $THISDIR $DATADIR/
 
 # Call voice_type_classifier to do broad-class diarization
 
@@ -79,11 +79,7 @@ if [ -z "$(ls -A $THISDIR/tmp_data/short/)" ]; then
   paste -d'\t' $THISDIR/tmp_data/features/SylNet_out_files.txt $THISDIR/tmp_data/features/ALUCs_out_individual_tmp.txt > $THISDIR/tmp_data/features/ALUCs_out_individual.txt
   rm $THISDIR/tmp_data/features/ALUCs_out_individual_tmp.txt
 fi
-#else
-  # If SylNet fails, this is due to none of the inputs having adult male or female speech detected by the diarizer.
-  # Alternatively, dependencies of SylNet are not satisified.
-  # Get final estimates at clip-level (sum results from short .wavs
-#
+
 
 
 #fi
