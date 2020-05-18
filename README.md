@@ -104,14 +104,14 @@ Always activate the ALICE conda environment before usage. To do this, run:
 
 To process your .wav files containing the audio of interest, run:
 ```
-  $ sh run_ALICE.sh <data_location>
+  $ ./run_ALICE.sh <data_location>
 ```
   where <data_location> = folder of .wavs, path to a .wav, or path to a .txt file
   with a list of .wav paths, one per row.
 
   For GPU use during diarization , use
 ```
-  $ sh run_ALICE.sh <data_location> --gpu
+  $ ./run_ALICE.sh <data_location> --gpu
 ```
 Note that the use of GPU will speed up diarization substantially, but this will require CUDA toolkit
 and a compatible GPU.
@@ -140,7 +140,7 @@ DEMO & INSTALLATION VERIFICATION
 Navigate to ALICE folder, and run
 ```
   $ conda activate ALICE
-  $ sh run_ALICE.sh demo/ROS_5271_20_01_03600_snippet_mono.wav 
+  $ ./run_ALICE.sh demo/ROS_5271_20_01_03600_snippet_mono.wav 
 ```
 
 After a while, ALICE should complete without errors and print
