@@ -1,2 +1,0 @@
-FileID 	 phonemes 	 syllables 	 words
-ROS_5271_20_01_03600_snippet_mono	31	11	9
