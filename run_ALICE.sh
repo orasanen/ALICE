@@ -63,7 +63,7 @@ if [ -z "$(ls -A $THISDIR/tmp_data/short/)" ]; then
         echo "SylNet completed"
     else
         echo "SylNet failed. See sylnet.log for more information"
-        return
+        exit
     fi
 
 # Extract signal level features
