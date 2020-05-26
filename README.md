@@ -83,7 +83,11 @@ INSTALLATION
 
     # Step 3: install pyannote-audio by running
 
-    $ pip install voice-type-classifier/pyannote/pyannote-audio
+    $ cd voice-type-classifier
+    $ git clone https://github.com/MarvinLvn/pyannote-audio.git
+    $ cd pyannote-audio
+    $ git checkout voice_type_classifier
+    $ pip install .
 
     # Done! If you now want to use ALICE, see below. If not, deactivate the environment with
 
