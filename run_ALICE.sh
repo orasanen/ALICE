@@ -88,7 +88,7 @@ python3 getFinalEstimates.py $THISDIR $THISDIR/tmp_data/
 
 # Cleanup
 rm -rf $THISDIR/tmp_data/
-cp $THISDIR/output_voice-type-classifier/tmp_data/all.rttm $THISDIR/diarization_output.rttm
+cp $THISDIR/output_voice_type_classifier/tmp_data/all.rttm $THISDIR/diarization_output.rttm
 rm -rf $THISDIR/output_voice_type_classifier/
 
 echo "ALICE completed. Results written to $THISDIR/ALICE_output.txt and $THISDIR/diarization_output.rttm."
