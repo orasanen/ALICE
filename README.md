@@ -37,7 +37,7 @@ for automatic linguistic unit count estimation from child-centered daylong recor
 REQUIREMENTS
 -------------------
 
-ALICE has been developed and so-far tested for a range of Linux and macOS environments. Windows users may encounter problems with some package versions, and we are currently looking into this. 
+ALICE has been developed and so-far tested for a range of Linux and macOS environments. Windows users may encounter problems with some package versions, and we are currently looking into this.
 
 Packages:
 
@@ -67,26 +67,26 @@ INSTALLATION
 - Use command line / shell to execute the following steps:
 
 ```bash    
-    # Step 1: Set up a conda environment 
-    
+    # Step 1: Set up a conda environment
+
     # Navigate to ALICE folder:
-    
+
     $ cd ALICE
-    
+
     # and run:
-    
+
     $ conda env create -f ALICE.yml          
-    
+
     # Step 2: activate the environment
-    
+
     $ conda activate ALICE  
-    
+
     # Step 3: install pyannote-audio by running
 
-    $ pip install voice_type_classifier/pyannote/pyannote-audio
-    
+    $ pip install voice-type-classifier/pyannote/pyannote-audio
+
     # Done! If you now want to use ALICE, see below. If not, deactivate the environment with
-    
+
     $ conda deactivate
 
 
@@ -116,7 +116,7 @@ To process your .wav files containing the audio of interest, run:
 Note that the use of GPU will speed up diarization substantially, but this will require CUDA toolkit
 and a compatible GPU.
 
-After the processing is complete, results will be written to `ALICE_output.txt` inside ALICE main 
+After the processing is complete, results will be written to `ALICE_output.txt` inside ALICE main
 directory. Diarization outputs will be written to `diarization_output.rttm` inside the same directory.
 
 When done, deactivate the environment with
@@ -134,13 +134,13 @@ Notes:
   to be processed.
 
 
-DEMO & INSTALLATION VERIFICATION 
+DEMO & INSTALLATION VERIFICATION
 -------------------
 
 Navigate to ALICE folder, and run
 ```
   $ conda activate ALICE
-  $ ./run_ALICE.sh demo/ROS_5271_20_01_03600_snippet_mono.wav 
+  $ ./run_ALICE.sh demo/ROS_5271_20_01_03600_snippet_mono.wav
 ```
 
 After a while, ALICE should complete without errors and print
@@ -165,7 +165,7 @@ DEBUGGING
 -------------------
 
 If you are encountering problems with SylNet, please refer to sylnet.log that is automatically
-generated to ALICE main folder upon ALICE execution. SylNet error printing to command line is disabled 
+generated to ALICE main folder upon ALICE execution. SylNet error printing to command line is disabled
 due to a large number of warnings due to the use of Tensorflow 1.
 
 ## Some common problems:
@@ -175,8 +175,8 @@ Traceback (most recent call last):
   File "<yourpath>/ALICE/SylNet/run_SylNet.py", line 99, in <module>
     y = y/max(abs(y))
 ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
-    
-### Solution #1 
+
+### Solution #1
 
 The input speech signal is likely to be stereo. Convert to mono before processing.   
 
