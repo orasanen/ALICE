@@ -26,7 +26,7 @@ if [ $# -ge 3 ]; then
     exit 2
 fi
 
-cp $THISDIR/apply_overwrite.sh $THISDIR/voice_type_classifier/apply.sh
+cp $THISDIR/apply_overwrite.sh $THISDIR/voice-type-classifier/apply.sh
 
 DATADIR=$1
 
@@ -43,10 +43,10 @@ mkdir -p $THISDIR/tmp_data/features/
 # Run SAD on the files
 python3 prepare_data.py $THISDIR $DATADIR/
 
-# Call voice_type_classifier to do broad-class diarization
+# Call voice-type-classifier to do broad-class diarization
 
-rm -rf $THISDIR/output_voice_type_classifier/
-bash $THISDIR/voice_type_classifier/apply.sh $THISDIR/tmp_data/ "MAL FEM" $GPU
+rm -rf $THISDIR/output_voice-type-classifier/
+bash $THISDIR/voice-type-classifier/apply.sh $THISDIR/tmp_data/ "MAL FEM" $GPU
 
 # Read .rttm files and split into utterance-sized wavs
 python3 split_to_utterances.py $THISDIR
@@ -88,7 +88,7 @@ python3 getFinalEstimates.py $THISDIR $THISDIR/tmp_data/
 
 # Cleanup
 rm -rf $THISDIR/tmp_data/
-cp $THISDIR/output_voice_type_classifier/tmp_data/all.rttm $THISDIR/diarization_output.rttm
-rm -rf $THISDIR/output_voice_type_classifier/
+cp $THISDIR/output_voice-type-classifier/tmp_data/all.rttm $THISDIR/diarization_output.rttm
+rm -rf $THISDIR/output_voice-type-classifier/
 
 echo "ALICE completed. Results written to $THISDIR/ALICE_output.txt and $THISDIR/diarization_output.rttm."
