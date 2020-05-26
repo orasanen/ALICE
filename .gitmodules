@@ -6,3 +6,6 @@
 	path = voice-type-classifier
 	url = https://github.com/MarvinLvn/voice-type-classifier
 	branch = new_model
+[submodule "SylNet"]
+	path = SylNet
+	url = https://github.com/shreyas253/SylNet
