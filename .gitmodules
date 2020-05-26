@@ -5,3 +5,6 @@
 [submodule "SylNet"]
 	path = SylNet
 	url = https://github.com/shreyas253/SylNet
+[submodule "voice-type-classifier"]
+	path = voice-type-classifier
+	url = https://github.com/MarvinLvn/voice-type-classifier/
