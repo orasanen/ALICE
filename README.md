@@ -76,7 +76,7 @@ INSTALLATION
     # and run:
 
     $ conda env create -f ALICE.yml          
-
+    
     # Step 2: activate the environment
 
     $ conda activate ALICE  
@@ -170,15 +170,16 @@ due to a large number of warnings due to the use of Tensorflow 1.
 
 ## Some common problems:
 
-### Error #1
-Traceback (most recent call last):
-  File "<yourpath>/ALICE/SylNet/run_SylNet.py", line 99, in <module>
-    y = y/max(abs(y))
-ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+### Error #1: "CondaValueError: prefix already exists: /<your_condadir>/envs/ALICE" when creating the Conda environment
 
-### Solution #1
+If you have installed an earlier version of ALICE before, please remove the old environment with 
 
-The input speech signal is likely to be stereo. Convert to mono before processing.   
+```
+  $ rm -rf /<your_condadir>/envs/ALICE/
+```
+
+and then install ALICE from scratch.
+
 
 
 REFERENCES
