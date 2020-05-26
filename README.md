@@ -155,7 +155,7 @@ Now, contents of the ``<yourpath>/ALICE/ALICE_output.txt`` should look like this
 
 FileID   phonemes        syllables       words
 
-ROS_5271_20_01_03600_snippet_mono       75      34      28
+ROS_5271_20_01_03600_snippet_mono       40      15      12
 
 ------
 
