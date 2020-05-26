@@ -170,7 +170,7 @@ due to a large number of warnings due to the use of Tensorflow 1.
 
 ## Some common problems:
 
-### Error #1: "CondaValueError: prefix already exists: /<your_condadir>/envs/ALICE" when creating the Conda environment
+#### Error #1: "CondaValueError: prefix already exists: /<your_condadir>/envs/ALICE" when creating the Conda environment
 
 If you have installed an earlier version of ALICE before, please remove the old environment with 
 
