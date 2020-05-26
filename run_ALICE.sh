@@ -26,8 +26,6 @@ if [ $# -ge 3 ]; then
     exit 2
 fi
 
-#cp $THISDIR/apply_overwrite.sh $THISDIR/voice-type-classifier/apply.sh
-
 DATADIR=$1
 
 if [ $# -ge 2 ]; then
