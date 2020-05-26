@@ -8,3 +8,4 @@
 [submodule "voice-type-classifier"]
 	path = voice-type-classifier
 	url = https://github.com/MarvinLvn/voice-type-classifier
+	branch = new_model
