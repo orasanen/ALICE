@@ -1,4 +1,4 @@
-name: ALICE2
+name: ALICE
 
 channels:
   - conda-forge
