@@ -1,5 +1,8 @@
 # Automatic LInguistic Unit Count Estimator (ALICE)
 
+
+NOTE: This branch contains an outdated version of ALICE. Please use the new default branch "new_diarizer" for up-to-date performance. Note that the environment 
+
 INTRODUCTION
 -------------------
 
