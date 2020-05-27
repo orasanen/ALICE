@@ -1,7 +1,3 @@
-[submodule "pyannote/pyannote-audio"]
-	path = pyannote/pyannote-audio
-	url = https://github.com/jsalt-coml/pyannote-audio
-	branch = bredin-pr
 [submodule "voice-type-classifier"]
 	path = voice-type-classifier
 	url = https://github.com/MarvinLvn/voice-type-classifier
