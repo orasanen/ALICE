@@ -60,36 +60,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 INSTALLATION
 -------------------
-- Clone the repository with submodules (`git clone --recurse-submodules https://github.com/orasanen/ALICE/`)
+- Clone the repository with submodules :
+
+```bash
+git clone --recurse-submodules https://github.com/orasanen/ALICE/
+```
 
 - Make sure you have Conda and Cmake installed.
 
-- Use command line / shell to execute the following steps:
+- Create the conda environment installing all the dependencies :
 
-```bash    
-    # Step 1: Set up a conda environment
-
-    # Navigate to ALICE folder:
-
-    $ cd ALICE
-
-    # and run:
-
-    $ conda env create -f ALICE.yml          
-    
-    # Step 2: activate the environment
-
-    $ conda activate ALICE  
-
-    # Step 3: install pyannote-audio by running
-
-    $ ./install_pyannote.sh
-
-    # Done! If you now want to use ALICE, see below. If not, deactivate the environment with
-
-    $ conda deactivate
-
-
+```bash
+conda env create -f ALICE.yml
 ```
 
 
