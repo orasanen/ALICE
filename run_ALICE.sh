@@ -44,7 +44,7 @@ python3 prepare_data.py $THISDIR $DATADIR/
 # Call voice-type-classifier to do broad-class diarization
 
 rm -rf $THISDIR/output_voice-type-classifier/
-bash $THISDIR/voice-type-classifier/apply.sh $THISDIR/tmp_data/ "MAL FEM" $GPU
+bash $THISDIR/voice-type-classifier/apply.sh $THISDIR/tmp_data/ "MAL FEM" $GPU |& sed '/^Took/d'
 
 # Read .rttm files and split into utterance-sized wavs
 python3 split_to_utterances.py $THISDIR
