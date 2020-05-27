@@ -71,6 +71,7 @@ git clone --recurse-submodules https://github.com/orasanen/ALICE/
 - Create the conda environment installing all the dependencies :
 
 ```bash
+cd ALICE
 conda env create -f ALICE.yml
 ```
 
