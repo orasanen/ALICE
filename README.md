@@ -114,9 +114,6 @@ When done, deactivate the environment with
 
 Notes:
 
-- So far, the system has been tested for audio files up to 5 minutes of duration.
-  For substantially longer files, cutting them into shorter pieces before
-  processing is highly recommended.
 - ALICE will require empty hard disk space equal to approx. the size of the .wavs
   to be processed.
 
