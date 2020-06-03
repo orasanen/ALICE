@@ -94,7 +94,7 @@ To process your .wav files containing the audio of interest, run:
 
   For GPU use during diarization , use
 ```
-  $ ./run_ALICE.sh <data_location> --gpu
+  $ ./run_ALICE.sh <data_location> gpu
 ```
 Note that the use of GPU will speed up diarization substantially, but this will require CUDA toolkit
 and a compatible GPU.
