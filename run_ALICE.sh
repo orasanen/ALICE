@@ -29,7 +29,9 @@ fi
 DATADIR=$1
 
 if [ $# -ge 2 ]; then
-    GPU=$2;
+    GPU=$(echo "$2" | tr '[:upper:]' '[:lower:]') # force lowercase
+else
+    GPU="cpu"
 fi;
 
 rm -rf $THISDIR/tmp_data/
@@ -44,7 +46,8 @@ python3 prepare_data.py $THISDIR $DATADIR/
 # Call voice-type-classifier to do broad-class diarization
 
 rm -rf $THISDIR/output_voice-type-classifier/
-bash $THISDIR/voice-type-classifier/apply.sh $THISDIR/tmp_data/ "MAL FEM" $GPU |& sed '/^Took/d'
+bash $THISDIR/voice-type-classifier/apply.sh $THISDIR/tmp_data/ "MAL FEM" --device=$GPU #|& sed '/^Took/d'
+#bash $THISDIR/voice-type-classifier/apply.sh $THISDIR/tmp_data/ "MAL FEM" $GPU #|& sed '/^Took/d' # old pyannote syntax
 
 # Read .rttm files and split into utterance-sized wavs
 python3 split_to_utterances.py $THISDIR
