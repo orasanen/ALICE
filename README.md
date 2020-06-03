@@ -100,8 +100,9 @@ To process your .wav files containing the audio of interest, run:
 Note that the use of GPU will speed up diarization substantially, but this will require CUDA toolkit
 and a compatible GPU.
 
-After the processing is complete, results will be written to `ALICE_output.txt` inside ALICE main
-directory. Diarization outputs will be written to `diarization_output.rttm` inside the same directory.
+After the processing is complete, linguistic unit estimates for each input audio file will be written to `ALICE_output.txt` inside ALICE main directory. Diarization outputs will be written to `diarization_output.rttm` inside the same directory. 
+
+In addition, utterance-level outputs for detected adult speech can be found from `ALICE_output_utterances.txt`, where each row corresponds to one utterance detected by the diarizer together with its estimated phoneme, syllable, and word counts. Timestamps appended to the filenames are of form <onset_time_in_ms x 10> _ <offset_time_in_ms x 10>, as measured from the beginning of each audio file. For instance, <filename>_00062740_00096150.wav stands for an utterance of <filename.wav> that started at 6.274 seconds and ended at 9.615 seconds. NOTE: utterance-level estimates are not meant to be precise, but they can be used to create aggregate measures of unit counts for desired time windows shorter than the full (e.g., daylong) recordings. 
 
 When done, deactivate the environment with
 ```
