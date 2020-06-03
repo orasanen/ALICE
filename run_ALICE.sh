@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 THISDIR="$( cd "$( dirname "$0" )" && pwd )"
 
-# Run with --gpu if CUDA GPU is available
+# Run with extra argument "gpu" if CUDA GPU is available
 
 
 if [ $# -eq 0 ]; then
