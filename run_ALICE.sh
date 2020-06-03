@@ -87,6 +87,8 @@ fi
 
 python3 getFinalEstimates.py $THISDIR $THISDIR/tmp_data/
 
+cp $THISDIR/tmp_data/features/ALUCs_out_individual.txt $THISDIR/ALICE_output_utterances.txt
+
 # Cleanup
 rm -rf $THISDIR/tmp_data/
 cp $THISDIR/output_voice_type_classifier/tmp_data/all.rttm $THISDIR/diarization_output.rttm
