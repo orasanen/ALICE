@@ -8,7 +8,7 @@ if [ $# -eq 0 ]; then
     echo "Too few arguments. Usage:
     sh run_ALICE.sh <data_location>
     or
-    sh run_ALICE.sh <data_location> --gpu (for GPU-supported environments)
+    sh run_ALICE.sh <data_location> gpu (for GPU-supported environments)
 
     Data location can be a folder with .wavs, an individual .wav file,
     or a .txt file with file paths to .wavs, one per row. "
@@ -19,7 +19,7 @@ if [ $# -ge 3 ]; then
     echo "Too many arguments. Usage:
     sh run_ALICE.sh <data_locationr>
     or
-    sh run_ALICE.sh <data_location> --gpu (for GPU-supported environments)
+    sh run_ALICE.sh <data_location> gpu (for GPU-supported environments)
 
     Data location can be a folder  with .wavs, an individual .wav file,
     or a .txt file with file paths to .wavs, one per row. "
