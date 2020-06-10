@@ -17,7 +17,7 @@ fi
 
 if [ $# -ge 3 ]; then
     echo "Too many arguments. Usage:
-    ./run_ALICE.sh <data_locationr>
+    ./run_ALICE.sh <data_location>
     or
     ./run_ALICE.sh <data_location> gpu (for GPU-supported environments)
 
