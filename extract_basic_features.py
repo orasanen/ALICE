@@ -18,11 +18,11 @@ zcr = []
 dur = []
 E = []
 
-for fileName in fileList:
-    fs, data = wavfile.read(fileName[0])
-    zcr.append(sum(abs(np.diff(np.sign(data))))) # zero crossing rate
-    dur.append(len(data)/fs)    # duration
-    E.append(20*np.log10(2^16)+20*np.log10(sum(abs(data)))) # total energy
+for fileName in fileList:    
+    data, _ = librosa.core.load(fileName[0], sr = 16000, mono = True)    
+    zcr.append(sum((np.diff(np.sign(data)))!= 0)) # zero crossing rate
+    dur.append(len(data)/16000)    # duration
+    E.append(20*np.log10(2**16)+20*np.log10(np.sum(np.abs(data)))) # total energy    
 
 F = np.column_stack((dur,E))
 F = np.column_stack((F,zcr))
