@@ -40,7 +40,7 @@ mkdir -p $THISDIR/tmp_data/
 mkdir -p $THISDIR/tmp_data/short/
 mkdir -p $THISDIR/tmp_data/features/
 
-# Run SAD on the files
+# Copy wavs-to-be-processed to local folder
 python3 prepare_data.py $THISDIR $DATADIR/
 
 # Call voice-type-classifier to do broad-class diarization
