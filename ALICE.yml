@@ -63,6 +63,7 @@ dependencies:
     - filelock==3.0.12
     - joblib==0.14.1
     - kiwisolver==1.1.0
+    - librosa==0.7.2
     - llvmlite==0.31.0
     - mako==1.1.1
     - markupsafe==1.1.1
@@ -74,6 +75,10 @@ dependencies:
     - pbr==5.4.4
     - prettytable==0.7.2
     - protobuf==3.11.2
+    - pyannote.core==3.7.1
+    - pyannote.database==3.0.1
+    - pyannote.metrics==2.3
+    - pyannote.pipeline==1.5
     - pycparser==2.19
     - pyparsing==2.4.6
     - pyperclip==1.7.0
