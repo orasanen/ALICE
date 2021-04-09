@@ -51,12 +51,10 @@ bash $THISDIR/voice-type-classifier/apply.sh $THISDIR/tmp_data/ "MAL FEM" --devi
 
 # Read .rttm files and split into utterance-sized wavs
 python3 split_to_utterances.py $THISDIR
-#rm $THISDIR/tmp_data/*.wav
 
 
 # Extract SylNet syllable counts
 if [ -z "$(ls -A $THISDIR/tmp_data/short/)" ]; then
-#if [ ${#files[@]} -gt 0 ]; then
   touch $THISDIR/tmp_data/features/ALUCs_out_individual.txt
   else
 
@@ -81,9 +79,6 @@ if [ -z "$(ls -A $THISDIR/tmp_data/short/)" ]; then
   rm $THISDIR/tmp_data/features/ALUCs_out_individual_tmp.txt
 fi
 
-
-
-#fi
 
 python3 getFinalEstimates.py $THISDIR $THISDIR/tmp_data/
 
