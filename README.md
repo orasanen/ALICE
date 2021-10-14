@@ -37,8 +37,9 @@ not operate on such data properly.
 If you use ALICE or it's derivatives, please cite the following paper:
 
 ```text
-Räsänen, O., Seshadri, S., Lavechin, M., Cristia, A. & Casillas, M. (in press): *ALICE: An open-source tool
-for automatic linguistic unit count estimation from child-centered daylong recordings*. Behavior Research Methods. Online open acccess: https://link.springer.com/article/10.3758/s13428-020-01460-x.
+Räsänen, O., Seshadri, S., Lavechin, M., Cristia, A. & Casillas, M. (in press): ALICE: An open-source tool
+for automatic linguistic unit count estimation from child-centered daylong recordings. Behavior Research Methods. 
+Online open acccess: https://link.springer.com/article/10.3758/s13428-020-01460-x.
 ```
 
 ### References
