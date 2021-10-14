@@ -77,7 +77,6 @@ dependencies:
     - protobuf==3.11.2
     - pyannote.core==3.7.1
     - pyannote.database==3.0.1
-    - pyannote.metrics==2.3
     - pyannote.pipeline==1.5
     - pycparser==2.19
     - pyparsing==2.4.6
