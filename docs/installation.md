@@ -6,10 +6,9 @@ Packages:
 
 - Conda (https://docs.conda.io/en/latest/)
 - CMake (```pip install cmake``` or ```conda install cmake```)
+- Sox (http://sox.sourceforge.net/ , ```brew install sox``` (macOS with Homebrew installed), ```sudo apt-get install sox```(Ubuntu))
 
 (other packages are automatically installed by conda environment)
-
-
 
 # Installation 
 
