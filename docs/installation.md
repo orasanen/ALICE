@@ -20,10 +20,18 @@ git clone --recurse-submodules https://github.com/orasanen/ALICE/
 
 - Make sure you have Conda and Cmake installed.
 
-- Create the conda environment installing all the dependencies :
+- Create the conda environment installing all the dependencies. Note that this is OS dependent:
 
 ```bash
 cd ALICE
-conda env create -f ALICE.yml
 ```
+
+On Linux:
+```conda env create -f ALICE_Linux.yml 
+```
+
+On macOS:
+```conda env create -f ALICE_macOS.yml 
+```
+And you're done! 
 
