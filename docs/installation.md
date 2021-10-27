@@ -24,14 +24,17 @@ git clone --recurse-submodules https://github.com/orasanen/ALICE/
 
 ```bash
 cd ALICE
+```  
+
+On Linux:  
+```
+conda env create -f ALICE_Linux.yml 
 ```
 
-On Linux:
-```conda env create -f ALICE_Linux.yml 
+On macOS:  
+```  
+conda env create -f ALICE_macOS.yml 
 ```
 
-On macOS:
-```conda env create -f ALICE_macOS.yml 
-```
 And you're done! 
 
