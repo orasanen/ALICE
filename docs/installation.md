@@ -18,7 +18,7 @@ Packages:
 git clone --recurse-submodules https://github.com/orasanen/ALICE/
 ```
 
-- Make sure you have Conda and Cmake installed.
+- Make sure you have Conda, Cmake and Sox installed.
 
 - Create the conda environment installing all the dependencies. Note that this is OS dependent:
 
