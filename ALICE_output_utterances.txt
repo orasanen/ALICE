@@ -1,5 +1,0 @@
-/Users/rasaneno/Documents/koodit/dists/ALICE_test/ALICE/tmp_data/short/ROS_5271_20_01_03600_snippet_mono_00003800_00016640.wav	11.69	5.44	3.56
-/Users/rasaneno/Documents/koodit/dists/ALICE_test/ALICE/tmp_data/short/ROS_5271_20_01_03600_snippet_mono_00034440_00059280.wav	20.88	10.43	6.88
-/Users/rasaneno/Documents/koodit/dists/ALICE_test/ALICE/tmp_data/short/ROS_5271_20_01_03600_snippet_mono_00063280_00095600.wav	31.72	15.81	10.19
-/Users/rasaneno/Documents/koodit/dists/ALICE_test/ALICE/tmp_data/short/ROS_5271_20_01_03600_snippet_mono_00143290_00155150.wav	10.25	4.82	3.17
-/Users/rasaneno/Documents/koodit/dists/ALICE_test/ALICE/tmp_data/short/ROS_5271_20_01_03600_snippet_mono_00187500_00199900.wav	10.71	4.95	3.28
