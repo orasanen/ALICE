@@ -39,5 +39,5 @@ for k in range(0,len(DATA)):
     offset = onset+float(s[4])
     if isvalid:
         y = data[max(0,round(onset*fs)):min(len(data),round(offset*fs))]
-        new_filename = curdir + '/tmp_data/short/'+ filename + ("_%08.0f" % (onset*10000)) + '_' + ("%08.0f" % (offset*10000)) +'.wav'
+        new_filename = curdir + '/tmp_data/short/'+ filename + ("_%010.0f" % (onset*10000)) + '_' + ("%08.0f" % (offset*10000)) +'.wav'
         wavfile.write(new_filename,fs,y)
