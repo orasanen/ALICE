@@ -1,6 +1,6 @@
 PATCH NOTES
 -------------------
 
-- August 30, 2023: Fixed a bug where timestamps in filenames in ALICE_output_utterances.txt resulted in a numerical overflow for long (> 2.8h) files. As a result, the utterance onset and offset format is now with 10 digits (seconds * 10000). 
+- August 30, 2023: Fixed a bug where timestamps in filenames created by split_utterances.py (as printed out by ALICE_output_utterances.txt) resulted in a numerical overflow for long (> 2.8h) files. As a result, the utterance onset and offset format is now with 10 digits (seconds * 10000 instead of the original 8 digits. If you use a custom parser to read the timestamps, please update your parser accordingly. It is theoretically possible but extremely unlikely that this might have also affected total unit count estimates of a long audio file by a small fraction (essentially: two utterances from the same speaker ID having exactly the same duration in milliseconds and the latter starting exactly 10 000 seconds later than the first would have resulted in skipping the first one).    
 
 - June 10, 2020: A major bugfix to count estimation. Fixed bugs in file loading and energy calculation in feature extraction pipeline. Count estimates for all files were slightly off due to energy scaling, and those not sampled at 16 khz (such as the demo file) were producing large estimation errors. This bug only affected the open source implementation here, but not the ALICE paper. Demo code reference counts also updated.
