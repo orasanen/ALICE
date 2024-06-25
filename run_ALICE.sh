@@ -41,7 +41,7 @@ mkdir -p $THISDIR/tmp_data/short/
 mkdir -p $THISDIR/tmp_data/features/
 
 # Copy wavs-to-be-processed to local folder
-python3 prepare_data.py $THISDIR $DATADIR
+python prepare_data.py $THISDIR $DATADIR
 
 # Call voice-type-classifier to do broad-class diarization
 
@@ -50,7 +50,7 @@ bash $THISDIR/voice-type-classifier/apply.sh $THISDIR/tmp_data/ "MAL FEM" --devi
 #bash $THISDIR/voice-type-classifier/apply.sh $THISDIR/tmp_data/ "MAL FEM" $GPU #|& sed '/^Took/d' # old pyannote syntax
 
 # Read .rttm files and split into utterance-sized wavs
-python3 split_to_utterances.py $THISDIR
+python split_to_utterances.py $THISDIR
 
 
 # Extract SylNet syllable counts
@@ -58,7 +58,7 @@ if [ -z "$(ls -A $THISDIR/tmp_data/short/)" ]; then
   touch $THISDIR/tmp_data/features/ALUCs_out_individual.txt
   else
 
-    if python3 $THISDIR/SylNet/run_SylNet.py $THISDIR/tmp_data/short/ $THISDIR/tmp_data/features/SylNet_out.txt $THISDIR/SylNet_model/model_1 &> $THISDIR/sylnet.log; then
+    if python $THISDIR/SylNet/run_SylNet.py $THISDIR/tmp_data/short/ $THISDIR/tmp_data/features/SylNet_out.txt $THISDIR/SylNet_model/model_1 &> $THISDIR/sylnet.log; then
         echo "SylNet completed"
     else
         echo "SylNet failed. See sylnet.log for more information"
@@ -66,13 +66,13 @@ if [ -z "$(ls -A $THISDIR/tmp_data/short/)" ]; then
     fi
 
 # Extract signal level features
-  python3 extract_basic_features.py $THISDIR
+  python extract_basic_features.py $THISDIR
 
 # Combine features
   paste -d'\t' $THISDIR/tmp_data/features/SylNet_out.txt $THISDIR/tmp_data/features/other_feats.txt > $THISDIR/tmp_data/features/final_feats.txt
 
 # Linear regression from features to unit counts
-  python3 regress_ALUCs.py $THISDIR
+  python regress_ALUCs.py $THISDIR
 
 # Merge with filename information
   paste -d'\t' $THISDIR/tmp_data/features/SylNet_out_files.txt $THISDIR/tmp_data/features/ALUCs_out_individual_tmp.txt > $THISDIR/tmp_data/features/ALUCs_out_individual.txt
@@ -80,7 +80,7 @@ if [ -z "$(ls -A $THISDIR/tmp_data/short/)" ]; then
 fi
 
 
-python3 getFinalEstimates.py $THISDIR $THISDIR/tmp_data/
+python getFinalEstimates.py $THISDIR $THISDIR/tmp_data/
 
 cp $THISDIR/tmp_data/features/ALUCs_out_individual.txt $THISDIR/ALICE_output_utterances.txt
 
