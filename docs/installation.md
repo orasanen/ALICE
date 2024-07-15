@@ -36,5 +36,7 @@ On macOS:
 conda env create -f ALICE_macOS.yml 
 ```
 
-And you're done! 
+And you're done!
+
+PS: If you encounter "package does not exist" errors when installing the conda, you're likely working with an osx-arm64 hardware architecture. Please refer to this [git issue](https://github.com/orasanen/ALICE/issues/29) for a solution.
 
