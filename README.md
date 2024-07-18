@@ -34,13 +34,25 @@ not operate on such data properly.
 
 ### How to cite ?
 
-If you use ALICE or it's derivatives, please cite the following paper:
+If you use ALICE or its derivatives, please cite the following paper:
 
 ```text
 Räsänen, O., Seshadri, S., Lavechin, M., Cristia, A. & Casillas, M. (in press): ALICE: An open-source tool
 for automatic linguistic unit count estimation from child-centered daylong recordings. Behavior Research Methods. 
 Online open acccess: https://link.springer.com/article/10.3758/s13428-020-01460-x.
 ```
+
+If you use the speaker diarization output (e.g., to compute conversational turns), please cite the following paper:
+
+```text
+@inproceedings{lavechin2020opensource,
+title={An open-source voice type classifier for child-centered daylong recordings},
+author={Marvin Lavechin and Ruben Bousbib and Hervé Bredin and Emmanuel Dupoux and Alejandrina Cristia},
+year={2020},
+booktitle = {Interspeech}
+}
+```
+
 
 ### References
 
