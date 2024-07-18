@@ -45,12 +45,7 @@ Online open acccess: https://link.springer.com/article/10.3758/s13428-020-01460-
 If you use the speaker diarization output (e.g., to compute conversational turns), please cite the following paper:
 
 ```text
-@inproceedings{lavechin2020opensource,
-title={An open-source voice type classifier for child-centered daylong recordings},
-author={Marvin Lavechin and Ruben Bousbib and Hervé Bredin and Emmanuel Dupoux and Alejandrina Cristia},
-year={2020},
-booktitle = {Interspeech}
-}
+Lavechin, M., Bousbib, R., Bredin, H., Dupoux, E., & Cristia, A. (2020). An open-source voice type classifier for child-centered daylong recordings. Interspeech.
 ```
 
 
