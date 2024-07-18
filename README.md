@@ -45,7 +45,8 @@ Online open acccess: https://link.springer.com/article/10.3758/s13428-020-01460-
 If you use the speaker diarization output (e.g., to compute conversational turns), please cite the following paper:
 
 ```text
-Lavechin, M., Bousbib, R., Bredin, H., Dupoux, E., & Cristia, A. (2020). An open-source voice type classifier for child-centered daylong recordings. Interspeech.
+Lavechin, M., Bousbib, R., Bredin, H., Dupoux, E., & Cristia, A. (2020).
+An open-source voice type classifier for child-centered daylong recordings. Interspeech.
 ```
 
 
@@ -60,5 +61,7 @@ Lavechin, M., Bousbib, R., Bredin, H., Dupoux, E., & Cristia, A. (2020). An open
 [2] Seshadri S. & Räsänen O. (2019). SylNet: An Adaptable End-to-End Syllable Count Estimator for Speech.
     IEEE Signal Processing Letters, vol 26, pp. 1359--1363  (https://github.com/shreyas253/SylNet)
 
-[3] Lavechin, M.: Voice-type-classifier (https://github.com/MarvinLvn/voice-type-classifier)
+[3] Lavechin, M., Bousbib, R., Bredin, H., Dupoux, E., & Cristia, A. (2020).
+    An open-source voice type classifier for child-centered daylong recordings. Interspeech.
+    (https://github.com/MarvinLvn/voice-type-classifier)
 ```
