@@ -31,12 +31,23 @@ On Linux:
 conda env create -f ALICE_Linux.yml 
 ```
 
-On macOS:  
+On macOS (Intel):  
+
 ```  
 conda env create -f ALICE_macOS.yml 
+```
+
+On MacOS (ARM processors, e.g., M1, M2...):
+
+```
+CONDA_SUBDIR=osx-64 conda env create -f ALICE_macOS.yml
+conda activate ALICE
+conda config --env --set subdir osx-64
 ```
 
 And you're done!
 
 PS: If you encounter "package does not exist" errors when installing the conda, you're likely working with an osx-arm64 hardware architecture. Please refer to this [git issue](https://github.com/orasanen/ALICE/issues/29) for a solution.
+
+
 
