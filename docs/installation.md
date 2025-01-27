@@ -37,7 +37,7 @@ On macOS (Intel):
 conda env create -f ALICE_macOS.yml 
 ```
 
-On MacOS (ARM processors, e.g., M1, M2...):
+On macOS (ARM processors, e.g., M1, M2...):
 
 ```
 CONDA_SUBDIR=osx-64 conda env create -f ALICE_macOS.yml
