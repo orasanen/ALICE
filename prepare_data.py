@@ -13,7 +13,7 @@ file_list = sys.argv[2]
 wasdir = 0
 # Check that input exists
 if(os.path.isdir(file_list)):
-    fileList = sorted(glob.glob(file_list + '*.wav'))
+    fileList = sorted(glob.glob(file_list + '/*.wav'))
     wasdir = 1
     if(len(fileList) == 0):
         raise Exception('Provided directory contains no .wav files')
